@@ -136,6 +136,7 @@ body {
 	background: #2196F3;
 	border-radius: 2px;
 	opacity: 0;
+	transform: scaleX(1.1);
 }
 
 .header-item-link.current::after {
@@ -223,6 +224,7 @@ body {
 .btn:focus,
 .btn:active {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	background-color: #188ce8;
 }
 
 /* __________FEATURES___________ */
@@ -323,9 +325,13 @@ body {
 }
 
 .occupation-heading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	position: absolute;
 	bottom: 0;
-	padding: 27px 0px;
+	padding: 27px 0;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 14px;
@@ -336,7 +342,6 @@ body {
 	color: var(--white-color-text);
 	width: 100%;
 	background-color: rgba(47, 48, 58, 0.8);
-
 }
 
 /* __________OUR TEAM___________ */
@@ -375,10 +380,6 @@ body {
 
 }
 
-.team-list-item:hover .team-icon,
-.team-list-item:focus .team-icon {
-	fill: #ffffff;
-}
 
 .team-link {
 	background-color: #ffffff;
@@ -391,7 +392,7 @@ body {
 	justify-content: center;
 
 
-	transition-property: background-color;
+	transition-property: background-color, color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -399,6 +400,7 @@ body {
 .team-link:hover,
 .team-link:focus {
 	background-color: var(--accent-color);
+	color: #ffffff;
 }
 
 .team-icon {
@@ -482,7 +484,7 @@ body {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
-.client-item:hover {
+.client-item:hover .client-item:focus {
 	border: 1px solid var(--accent-color);
 }
 
@@ -715,15 +717,15 @@ body {
 	color: var(--white-color-text);
 	background: rgba(33, 150, 243, 0.9);
 
-	transform: translateY(100%);
+	transform: translateY(101%);
+	transition-property: transform;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	overflow: auto;
 }
 
 .portfolio-item:hover .portfolio-link-text {
 	transform: translateY(0);
-	transition-property: transform;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
