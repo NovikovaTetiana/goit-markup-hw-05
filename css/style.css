@@ -215,7 +215,7 @@ body {
 	background-color: var(--accent-color);
 	cursor: pointer;
 
-	transition-property: box-shadow;
+	transition-property: box-shadow, background-color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -384,13 +384,12 @@ body {
 .team-link {
 	background-color: #ffffff;
 	border-radius: 50%;
-	color: var(--secondary-color-text);
+	color: #afb1b8;
 	width: 100%;
 	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 
 	transition-property: background-color, color;
 	transition-duration: 250ms;
@@ -469,7 +468,9 @@ body {
 	gap: 30px;
 }
 
-.client-item {
+.client-item {}
+
+.client-link {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -478,20 +479,9 @@ body {
 	height: 92px;
 	border: 1px solid #afb1b8;
 	border-radius: 4px;
-
-	transition-property: border;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
-}
-
-.client-item:hover .client-item:focus {
-	border: 1px solid var(--accent-color);
-}
-
-.client-link {
 	color: #afb1b8;
 
-	transition-property: color;
+	transition-property: color, border;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -499,6 +489,7 @@ body {
 .client-link:hover,
 .client-link:focus {
 	color: var(--accent-color);
+	border: 1px solid var(--accent-color);
 }
 
 .client-icon {
